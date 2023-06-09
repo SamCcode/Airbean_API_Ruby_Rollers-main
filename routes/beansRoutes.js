@@ -1,9 +1,10 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const { getMenu, addMenuItem, deleteMenuItem, changeMenuItem } = require('../menu/menu.js');
-const { checkProperty, plannedDelivery, isDelivered, checkDelivery, orderValidation, createNewItem, uppdateItem } = require('../utils.js');
+const { checkProperty, plannedDelivery, isDelivered, checkDelivery, orderValidation, createNewItem, uppdateItem, isAuthenticated } = require('../utils.js');
 const { updateUserOrders, findUsers } = require('../users/users.js');
 const router = express.Router();
+
 
 router.get('/api/beans', async (req, res) => {
     try {
@@ -17,7 +18,7 @@ router.get('/api/beans', async (req, res) => {
 //Lägga till en ny produkt i menyn
 
 router.post(
-    '/api/beans/add',
+    '/api/beans/add', isAuthenticated,
     async (req, res) => {
       const { error, newItem } = createNewItem(req.body);
   
@@ -62,7 +63,7 @@ router.delete('/api/beans/:id', async (req, res) => {
     try {
         const id = req.params.id;
         const updatedMenu = await deleteMenuItem(id);
-        return res.json(updatedMenu);
+        return res.json(responseObj);
     } catch (error) {
         return res.status(500).json({ message: 'Server error.' })
     }

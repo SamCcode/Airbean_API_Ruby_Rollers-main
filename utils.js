@@ -1,5 +1,9 @@
 const { findMenuItem } = require('./menu/menu.js')
 const Joi = require('joi');
+const jwt = require('jsonwebtoken');
+const {expressJwt} = require('express-jwt');
+const secretKey = 'karlsson-på-taket';
+const isAuthenticated = expressJwt({ secret: secretKey, algorithms: ['HS256'] });
 
 function checkProperty(property) {
     return function(req, res, next) {
@@ -116,6 +120,20 @@ function createNewItem(reqBody) {
     return { newItem };
   };
 
+  //generera token
+  function generateToken(user) {
+    const payload = {
+      id: user.id,
+      username: user.username
+    };
+    const options = {
+      expiresIn: '1h' 
+    };
+    return jwt.sign(payload, secretKey, options);
+  }
+
+  
+
 
 module.exports = {
     checkProperty,
@@ -124,5 +142,7 @@ module.exports = {
     isDelivered,
     orderValidation,
     createNewItem,
-    uppdateItem
+    uppdateItem,
+    generateToken,
+    isAuthenticated 
 }
