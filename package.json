@@ -10,12 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.1.4",
     "express": "^4.18.2",
     "express-jwt": "^8.4.1",
     "express-validator": "^7.0.1",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.0",
     "nedb-promise": "^2.0.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
     "uuid": "^9.0.0"
   }
 }

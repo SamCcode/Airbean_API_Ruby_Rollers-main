@@ -1,7 +1,7 @@
 const express = require('express');
 const { v4: uuidv4 } = require('uuid');
 const { getMenu, addMenuItem, deleteMenuItem, changeMenuItem } = require('../menu/menu.js');
-const { checkProperty, plannedDelivery, isDelivered, checkDelivery, orderValidation, createNewItem, uppdateItem, isAuthenticated } = require('../utils.js');
+const { checkProperty, plannedDelivery, isDelivered, checkDelivery, orderValidation, createNewItem, uppdateItem, isAuthenticated, verifyAdminToken } = require('../utils.js');
 const { updateUserOrders, findUsers } = require('../users/users.js');
 const router = express.Router();
 
@@ -18,10 +18,10 @@ router.get('/api/beans', async (req, res) => {
 //Lägga till en ny produkt i menyn
 
 router.post(
-    '/api/beans/add', isAuthenticated,
+    '/api/beans/add', verifyAdminToken,
     async (req, res) => {
       const { error, newItem } = createNewItem(req.body);
-  
+        
       if (error) {
         return res.status(400).json({ message: error });
       }
@@ -54,28 +54,32 @@ router.post(
     }
   );
 
+ 
+
 // ta bort item från menyn 
 
-router.delete('/api/beans/:id', async (req, res) => {
+router.delete('/api/beans/:id', verifyAdminToken, async (req, res) => {
     const responseObj = {
         message: 'item deleted',
     }
-    try {
         const id = req.params.id;
         const updatedMenu = await deleteMenuItem(id);
         return res.json(responseObj);
-    } catch (error) {
-        return res.status(500).json({ message: 'Server error.' })
-    }
+   
 });
+
+  
 
 // uppdatera item i menyn 
 
-router.put('/api/beans/:id', 
+router.put('/api/beans/:id/', verifyAdminToken,
 async (req, res) => {
     const id = req.params.id;
     const { error, itemFound, updatedItem } = await changeMenuItem(id, req.body);
   
+    if (!req.user.isAdmin) {
+        return res.status(403).json({ message: 'no permit to site' });
+      }
     if (error) {
         return res.status(400).json({ message: error });
     }
@@ -144,5 +148,40 @@ router.get('/api/beans/order/status', checkProperty('userID'), checkProperty('or
     
     return res.json(status);
 });
+
+//Lägga till kampanjerbjudanden
+
+router.post(
+    '/api/beans/campains', verifyAdminToken,
+    async (req, res) => {
+        const { itemOne, itemTwo } = req.body;
+        const menu = await getMenu();
+        const foundItemOne = menu.find(item => item.title === itemOne);
+        const foundItemTwo = menu.find(item => item.title === itemTwo);
+  
+      let responseObj = {
+        success: true,
+        message: 'New item added to menu.',
+      };
+      
+      if (foundItemOne && foundItemTwo) {
+          const newCampain = {
+            title: "Campain",
+            itemOne:foundItemOne.title,
+            itemTwo:foundItemTwo.title,
+            totalPrice: foundItemOne.price + foundItemTwo.price
+        }
+        addMenuItem(newCampain);
+    } else {
+        responseObj = {
+            success: false,
+            message: 'Wrong data presented.',
+        };
+    }
+    return res.json(responseObj);
+  
+    
+});
+
 
 module.exports = router;

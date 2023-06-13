@@ -1,9 +1,8 @@
 const { findMenuItem } = require('./menu/menu.js')
 const Joi = require('joi');
 const jwt = require('jsonwebtoken');
-const {expressJwt} = require('express-jwt');
-const secretKey = 'karlsson-på-taket';
-const isAuthenticated = expressJwt({ secret: secretKey, algorithms: ['HS256'] });
+require('dotenv').config();
+   
 
 function checkProperty(property) {
     return function(req, res, next) {
@@ -120,19 +119,38 @@ function createNewItem(reqBody) {
     return { newItem };
   };
 
-  //generera token
-  function generateToken(user) {
+  const secret = process.env.TOKEN_SECRET || 'your_secret_key';
+
+  function signToken(user) {
     const payload = {
       id: user.id,
-      username: user.username
+      username: user.username,
+      role: user.role 
     };
-    const options = {
-      expiresIn: '1h' 
-    };
-    return jwt.sign(payload, secretKey, options);
+  
+    return jwt.sign(payload, process.env.TOKEN_SECRET, { expiresIn: '1h' });
   }
 
-  
+function verifyAdminToken(req, res, next) {
+  const token = req.header('auth-token');
+  if (!token) return res.status(401).send('Access Denied');
+
+  try {
+    const verified = jwt.verify(token, secret);
+    if (verified.role === 'admin') {
+      req.user = verified;
+      next();
+    } else {
+      res.status(403).send('Forbidden');
+    }
+  } catch (err) {
+    res.status(400).send('Invalid Token');
+  }
+}
+
+// skapa kampanjerbjudanden 
+
+module.exports = { signToken };
 
 
 module.exports = {
@@ -143,6 +161,6 @@ module.exports = {
     orderValidation,
     createNewItem,
     uppdateItem,
-    generateToken,
-    isAuthenticated 
+    signToken,
+    verifyAdminToken
 }

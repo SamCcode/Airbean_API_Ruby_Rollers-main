@@ -1,6 +1,6 @@
 const express = require('express');
 const { findUsers, createUser } = require('../users/users.js');
-const { checkProperty } = require('../utils.js');
+const { checkProperty,signToken } = require('../utils.js');
 const router = express.Router();
 
 // Skapa konto
@@ -49,9 +49,11 @@ router.post('/api/user/login', checkProperty('username'), checkProperty('passwor
         responseObj.success = false;
         responseObj.message = 'Wrong username.'
     }
-
-    return res.json(responseObj);
+    const token = signToken(user);
+    res.json({ token,responseObj });
 });
+
+
 
 // Hämta orderhistorik
 router.get('/api/user/history', checkProperty('userID'), async (req, res) => {

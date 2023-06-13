@@ -1,2 +1,2 @@
-{"username":"username","password":"password123","orders":[],"_id":"34T10vzNa9SYOFW9"}
-{"username":"cissi","password":"password1234","orders":[],"_id":"IB3R6HgQQiLNA0Bx"}
+{"role":"admin","username":"admin","password":"admin123","orders":[],"_id":"3jgb8Riz9bJD2kmd"}
+{"role":"user","username":"username","password":"password123","orders":[],"_id":"yf8uVVP539x7lXr2"}

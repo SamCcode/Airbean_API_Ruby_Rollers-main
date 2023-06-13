@@ -9,7 +9,7 @@ const PORT = 1337;
 app.use(express.json());
 app.use(beansRoutes);
 app.use(userRoutes);
-application.use(apiKeyMiddleware);
+
 
 
 app.listen(PORT, () => {

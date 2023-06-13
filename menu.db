@@ -1,9 +1,42 @@
-{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"6h1lVdiEwXoERjut"}
-{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"91Yb7TXACqQjKqno"}
-{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"Cj2XtFNUhr80La8q"}
-{"id":"coffee-220dodpzmg6655","title":"Caffè karlsson","desc":"Caffè karlsson","price":498,"createdAt":"2023-06-09 12:03:34","_id":"DLjfT1abfJJ2wSoU"}
-{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"HAYBvZJdUkLDtXRx"}
-{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"ICwxNmZtNhXfjnGO"}
-{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"zpxxK61dxQXjQ5Of"}
-{"$$deleted":true,"_id":"DLjfT1abfJJ2wSoU"}
-{"id":"coffee-220dodpzmg6655","title":"Caffè karlsson","desc":"Caffè karlsson","price":498,"createdAt":"2023-06-09 12:04:29","_id":"xGFFPeGzlfR92fCg"}
+{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"2IGZ2KyCRb3yIO33"}
+{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"6qqcjz9BkGbZuWAS"}
+{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"726ozVxgXR04sqEN"}
+{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"8TCMYZdGceqzzINm"}
+{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"8UnwDq2fPKhKstDA"}
+{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"9Adk7RIFRx4X4t5p"}
+{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"AvbjXqzcshHEqg1s"}
+{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"Ax6qEWH6SAs43kZr"}
+{"id":"pastry-db3gfsuqpr","title":"Gustav Adolfsbakelse","desc":"En kunglig bakelse.","price":50,"_id":"CJhm1vnyxFlsX4AY"}
+{"id":"coffee-220dodpzmg","title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"_id":"DsTr3SRtGOX4mIiF"}
+{"id":"pastry-db3gfsuqpr","title":"Gustav Adolfsbakelse","desc":"En kunglig bakelse.","price":50,"_id":"E4TJr6Begwmi3eIm"}
+{"title":"Campain","itemOne":{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"8TCMYZdGceqzzINm"},"itemTwo":{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"2IGZ2KyCRb3yIO33"},"totalPrice":88,"_id":"G2bRdCOmj42C6w3W"}
+{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"GiBXkZBdoRQqO8qx"}
+{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"Jp5nPNzXOejd4ocj"}
+{"id":"pastry-db3gfsuqpr","title":"Gustav Adolfsbakelse","desc":"En kunglig bakelse.","price":50,"_id":"KKjcn5eP52geklub"}
+{"id":"coffee-220dodpzmg","title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"_id":"LA4Jnz4MrQCbK0GG"}
+{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"LCvwuEMSrLk1Sf8y"}
+{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"MXIzorLgzKuusTUc"}
+{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"Mjrl8z2s49aVs7AP"}
+{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"RCeJurBLnC5qPahk"}
+{"id":"pastry-db3gfsuqpr","title":"Gustav Adolfsbakelse","desc":"En kunglig bakelse.","price":50,"_id":"UUxBKksbajcAroQG"}
+{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"X7byf5OLlrffpEal"}
+{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"Z2R9uJFu8JR8EORy"}
+{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"ZZNBmWiTAAc9RpfP"}
+{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"cRim0tLp81MCSwtZ"}
+{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"hvBwheksDbWcFoY2"}
+{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"i1ZsE82scIdN9L3U"}
+{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"i1zi6FuMbebhrKS8"}
+{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"iReyo7qEqqbYnm2y"}
+{"id":"coffee-220dodpzmg","title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"_id":"nBkeplIPeVgZWjXI"}
+{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"pSuZyejYAnD4dDEy"}
+{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"v8c6dNSZdhGSvNAX"}
+{"id":"coffee-220dodpzmg","title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"_id":"yNlftdBIiUsGcYJS"}
+{"id":"coffee-vxig26my4y","title":"Bryggkaffe","desc":"Bryggd på månadens bönor.","price":39,"_id":"hXUctvNDNFYCTygE"}
+{"id":"coffee-220dodpzmg","title":"Caffè Doppio","desc":"Bryggd på månadens bönor.","price":49,"_id":"dxGQ0AhuB8YDA3Xg"}
+{"id":"coffee-4pdksmrkfa","title":"Cappuccino","desc":"Bryggd på månadens bönor.","price":49,"_id":"xL7NOGC1LySK0zmq"}
+{"id":"coffee-m2h37k2mnh","title":"Latte Macchiato","desc":"Bryggd på månadens bönor.","price":49,"_id":"y8wGIZxU24Dam9eE"}
+{"id":"coffee-0lp6ter3bh","title":"Kaffe Latte","desc":"Bryggd på månadens bönor.","price":54,"_id":"AnNxanZs2kjq8H69"}
+{"id":"coffee-e8hz0lk7q5","title":"Cortado","desc":"Bryggd på månadens bönor.","price":39,"_id":"mBWn4DFKuYQu78n6"}
+{"id":"pastry-db3gfsuqpr","title":"Gustav Adolfsbakelse","desc":"En kunglig bakelse.","price":50,"_id":"OVQzZpOLoKu5pXSo"}
+{"id":"pastry-vkzh17ct2r","title":"Semla","desc":"En fastlagsbulle i sin rätta form.","price":50,"_id":"LC6hgjtBAwS8UcAp"}
+{"title":"Campain","itemOne":"Cortado","itemTwo":"Latte Macchiato","totalPrice":88,"_id":"WrsQ5xi7Mit5ELZu"}

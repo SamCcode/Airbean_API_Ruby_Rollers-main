@@ -8,6 +8,7 @@ function createDB(filename, database) {
     file.items.forEach(item => {
         database.insert(item);
     });
+   
 }
 
 module.exports = {

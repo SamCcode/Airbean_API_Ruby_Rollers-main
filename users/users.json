@@ -1,8 +1,15 @@
 {
     "items": [
-        {
+        {   
+            "role":"user",
             "username": "username",
             "password": "password123",
+            "orders": []
+        },
+        {
+            "role":"admin",
+            "username": "admin",
+            "password": "admin123",
             "orders": []
         }
     ]
